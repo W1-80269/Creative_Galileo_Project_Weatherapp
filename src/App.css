@@ -1,38 +1,163 @@
+/* App.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #ace0f9, #89cff0);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-name {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-bar {
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.city-search {
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 1em;
+  text-align: center;
+  outline: none;
+}
+
+.weather-card {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.city-name h2 {
+  margin: 0;
+  font-size: 1.8em;
+  color: #333;
+}
+
+.city-name span {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.icon-temp {
+  margin: 20px 0;
+  font-size: 4em;
+  color: #333;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.icon-temp img {
+  width: 100px;
+  height: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.deg {
+  font-size: 0.8em;
+  vertical-align: super;
+  color: #888;
+}
+
+.des-wind p {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #666;
+}
+
+.error-message {
+  color: red;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+  .app-name {
+    font-size: 2em;
   }
-  to {
-    transform: rotate(360deg);
+
+  .city-search {
+    width: 90%;
+    font-size: 0.9em;
+  }
+
+  .weather-card {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .city-name h2 {
+    font-size: 1.5em;
+  }
+
+  .icon-temp {
+    font-size: 3em;
+  }
+
+  .icon-temp img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .des-wind p {
+    font-size: 0.9em;
+  }
+
+  .error-message {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 400px) {
+  .app-name {
+    font-size: 1.8em;
+  }
+
+  .city-search {
+    font-size: 0.8em;
+  }
+
+  .weather-card {
+    padding: 10px;
+  }
+
+  .city-name h2 {
+    font-size: 1.2em;
+  }
+
+  .icon-temp {
+    font-size: 2.5em;
+  }
+
+  .icon-temp img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .des-wind p {
+    font-size: 0.8em;
+  }
+
+  .error-message {
+    font-size: 0.9em;
   }
 }
